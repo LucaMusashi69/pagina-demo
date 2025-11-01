@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miguel Angel Olivares Hernandez - Desarrollador Full-Stack & DevOps</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio de Miguel Angel Olivares - Desarrollador Full-Stack especializado en DevOps, Cloud, Blockchain e Inteligencia Artificial">
+  <meta name="keywords" content="desarrollador full-stack, DevOps, cloud, blockchain, React, Node.js, Python, C#">
+  <meta name="author" content="Miguel Angel Olivares Hernandez">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Miguel Angel Olivares - Portfolio">
+  <meta property="og:description" content="Desarrollador full-stack especializado en DevOps, Cloud y Blockchain">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  
+  <!-- Preconnect CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  
+  <!-- RemixIcon - Movido al head -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  
+  <style>
+    body { 
+      font-family: 'Manrope', sans-serif;
+    }
+    code, pre { 
+      font-family: 'Ubuntu Mono', monospace; 
+    }
+    
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Animación de entrada */
+    .fade-in {
+      animation: fadeIn 0.8s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Toggle de tema oscuro */
+    .dark-mode {
+      background-color: #1a1a1a;
+      color: #e5e5e5;
+    }
+    
+    .dark-mode .bg-neutral-50 {
+      background-color: #1a1a1a;
+    }
+    
+    .dark-mode .bg-white {
+      background-color: #2a2a2a;
+    }
+    
+    .dark-mode .text-gray-800 {
+      color: #e5e5e5;
+    }
+    
+    .dark-mode .text-gray-600 {
+      color: #a0a0a0;
+    }
+    
+    .dark-mode .text-gray-500 {
+      color: #888;
+    }
+  </style>
+</head>
+<body class="bg-neutral-50 text-gray-800 scroll-smooth">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-neutral-50/95 backdrop-blur-sm shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="#" class="text-2xl font-bold hover:text-purple-600 transition-colors">Miguel.dev</a>
+      
+      <!-- Menú de navegación -->
+      <div class="hidden md:flex gap-6 text-gray-600 font-medium">
+        <a href="#sobre-mi" class="hover:text-purple-600 transition-colors">Sobre mí</a>
+        <a href="#educacion" class="hover:text-purple-600 transition-colors">Educación</a>
+        <a href="#habilidades" class="hover:text-purple-600 transition-colors">Habilidades</a>
+        <a href="#proyectos" class="hover:text-purple-600 transition-colors">Proyectos</a>
+        <a href="#contacto" class="hover:text-purple-600 transition-colors">Contacto</a>
+      </div>
+      
+      <!-- Enlaces sociales -->
+      <div class="flex gap-4 text-gray-600">
+        <button id="darkModeToggle" class="hover:text-purple-600 transition-colors" aria-label="Cambiar tema">
+          <i class="ri-moon-line text-2xl"></i>
+        </button>
+        <a href="https://www.linkedin.com/in/miguel-olivares" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition-colors" aria-label="LinkedIn de Miguel Olivares">
+          <i class="ri-linkedin-box-line text-2xl"></i>
+        </a>
+        <a href="https://github.com/miguel-olivares" target="_blank" rel="noopener noreferrer" class="hover:text-purple-600 transition-colors" aria-label="GitHub de Miguel Olivares">
+          <i class="ri-github-line text-2xl"></i>
+        </a>
+        <a href="mailto:miguel.olivares@example.com" class="hover:text-purple-600 transition-colors" aria-label="Enviar email a Miguel Olivares">
+          <i class="ri-mail-line text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="h-20"></div> <!-- Spacer -->
+
+  <!-- Header -->
+  <header class="py-20 bg-neutral-50 fade-in">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
+      <div class="avatar w-48 h-48 rounded-full overflow-hidden shadow-lg ring-4 ring-purple-100">
+        <img src="https://ui-avatars.com/api/?name=Miguel+Olivares&size=400&background=7c3aed&color=fff&bold=true" alt="Miguel Angel Olivares Hernandez" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="header-text max-w-xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Hola, soy Miguel Angel Olivares Hernandez</h1>
+        <p class="text-gray-600 mb-6 leading-relaxed">Soy desarrollador full-stack y especialista en DevOps, con sólida experiencia en testeo, cloud y blockchain, apasionado por integrar inteligencia artificial para diseñar soluciones tecnológicas innovadoras y eficientes. Me destaco por un enfoque orientado a resultados, capaz de transformar ideas complejas en sistemas funcionales y escalables.</p>
+        <div class="flex gap-4">
+          <a href="#proyectos" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-purple-700 hover:scale-105 transition-transform duration-300">Ver proyectos</a>
+          <a href="#contacto" class="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300">Contactar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="max-w-4xl mx-auto px-6 py-20 fade-in">
+    <h2 class="text-3xl font-semibold text-center mb-8">Sobre mí</h2>
+    <div class="bg-white rounded-2xl shadow-md p-8">
+      <p class="text-gray-600 leading-relaxed mb-4">
+        Mi viaje en la tecnología comenzó con la curiosidad de entender cómo funcionan las cosas. Desde entonces, he trabajado en proyectos que van desde aplicaciones móviles hasta sistemas empresariales complejos.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        Me especializo en crear soluciones que no solo funcionan, sino que escalan. Mi experiencia abarca desde el desarrollo frontend con React hasta arquitecturas cloud complejas con Kubernetes y Docker.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        Cuando no estoy programando, me gusta mantenerme actualizado con las últimas tendencias en IA y blockchain, siempre buscando la próxima tecnología que pueda ayudarme a resolver problemas de manera más eficiente.
+      </p>
+      
+      <!-- Badges de tecnologías -->
+      <div class="flex flex-wrap gap-2 mt-6">
+        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">React</span>
+        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium">C# / .NET</span>
+        <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">Kubernetes</span>
+        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">AWS</span>
+        <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">Blockchain</span>
+        <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-medium">AI/ML</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educación -->
+  <section id="educacion" class="max-w-4xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-semibold text-center mb-12">Educación</h2>
+    <div class="space-y-6">
+      <div class="bg-white rounded-2xl shadow-md p-6 flex items-start gap-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-700 font-semibold text-lg">B</div>
+        <div class="flex-1">
+          <div class="font-semibold text-gray-800 text-lg">Lic. en Ingeniería de Software</div>
+          <div class="text-sm text-gray-500 mb-2">Universidad Ejemplo — 2016–2020</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-indigo-50 text-indigo-600 px-2 py-1 rounded text-xs">Cloud Computing</span>
+            <span class="bg-indigo-50 text-indigo-600 px-2 py-1 rounded text-xs">DevOps</span>
+            <span class="bg-indigo-50 text-indigo-600 px-2 py-1 rounded text-xs">Arquitectura de Software</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md p-6 flex items-start gap-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center text-purple-700 font-semibold text-lg">C</div>
+        <div class="flex-1">
+          <div class="font-semibold text-gray-800 text-lg">Certificación / Bootcamp Full‑Stack</div>
+          <div class="text-sm text-gray-500 mb-2">Instituto Ejemplo — 2021</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-purple-50 text-purple-600 px-2 py-1 rounded text-xs">React</span>
+            <span class="bg-purple-50 text-purple-600 px-2 py-1 rounded text-xs">Node.js</span>
+            <span class="bg-purple-50 text-purple-600 px-2 py-1 rounded text-xs">Testing</span>
+            <span class="bg-purple-50 text-purple-600 px-2 py-1 rounded text-xs">MongoDB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md p-6 flex items-start gap-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center text-indigo-700">
+          <i class="ri-graduation-cap-line text-2xl"></i>
+        </div>
+        <div class="flex-1">
+          <div class="font-semibold text-gray-800 text-lg">TSU en Desarrollo de Software Multiplataforma</div>
+          <div class="text-sm text-gray-500 mb-2">Instituto / Centro — 2022–2024</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-teal-50 text-teal-600 px-2 py-1 rounded text-xs">Desarrollo Móvil</span>
+            <span class="bg-teal-50 text-teal-600 px-2 py-1 rounded text-xs">Multiplataforma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades" class="max-w-4xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-semibold text-center mb-12">Habilidades</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="ri-code-s-slash-line text-4xl text-indigo-600"></i>
+        </div>
+        <h3 class="font-semibold text-xl mb-3">Frontend</h3>
+        <p class="text-gray-500 text-sm mb-4">Interfaces modernas, responsivas e interactivas</p>
+        <div class="flex flex-wrap gap-2 justify-center">
+          <span class="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-xs">React</span>
+          <span class="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-xs">Tailwind</span>
+          <span class="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-xs">Next.js</span>
+        </div>
+      </div>
+      
+      <div class="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="ri-server-line text-4xl text-purple-600"></i>
+        </div>
+        <h3 class="font-semibold text-xl mb-3">Backend</h3>
+        <p class="text-gray-500 text-sm mb-4">APIs robustas y escalables</p>
+        <div class="flex flex-wrap gap-2 justify-center">
+          <span class="bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs">Node.js</span>
+          <span class="bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs">Python</span>
+          <span class="bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs">C# / .NET</span>
+          <span class="bg-purple-50 text-purple-700 px-2 py-1 rounded text-xs">MongoDB</span>
+        </div>
+      </div>
+      
+      <div class="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div class="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="ri-cloud-line text-4xl text-teal-600"></i>
+        </div>
+        <h3 class="font-semibold text-xl mb-3">DevOps & Cloud</h3>
+        <p class="text-gray-500 text-sm mb-4">Infraestructura automatizada y escalable</p>
+        <div class="flex flex-wrap gap-2 justify-center">
+          <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Docker</span>
+          <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">Kubernetes</span>
+          <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">CI/CD</span>
+          <span class="bg-teal-50 text-teal-700 px-2 py-1 rounded text-xs">AWS/Azure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-semibold text-center mb-12">Proyectos Destacados</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div class="bg-orange-100 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+          <i class="ri-chat-1-line text-3xl text-orange-600"></i>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">Chatbot hecho en Swift</h3>
+        <p class="text-gray-500 text-sm mb-4">Aplicación de chatbot desarrollada en Swift para iOS, enfocada en soporte y comunicación móvil con procesamiento de lenguaje natural.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">Swift</span>
+          <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">iOS</span>
+          <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded text-xs">NLP</span>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" class="text-purple-600 hover:text-purple-700 font-medium text-sm flex items-center gap-1">
+            Ver demo <i class="ri-arrow-right-line"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-800 font-medium text-sm flex items-center gap-1">
+            Código <i class="ri-github-line"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div class="bg-blue-100 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+          <i class="ri-emotion-line text-3xl text-blue-600"></i>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">App de apoyo emocional</h3>
+        <p class="text-gray-500 text-sm mb-4">Aplicación web interactiva desarrollada en React para brindar apoyo emocional, recursos de bienestar y seguimiento del estado anímico.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">React</span>
+          <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Node.js</span>
+          <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">MongoDB</span>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" class="text-purple-600 hover:text-purple-700 font-medium text-sm flex items-center gap-1">
+            Ver demo <i class="ri-arrow-right-line"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-800 font-medium text-sm flex items-center gap-1">
+            Código <i class="ri-github-line"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div class="bg-indigo-100 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+          <i class="ri-stack-line text-3xl text-indigo-700"></i>
+        </div>
+        <h3 class="font-semibold text-xl mb-2">Sistema ERP empresarial</h3>
+        <p class="text-gray-500 text-sm mb-4">Sistema ERP desarrollado con C# y .NET para gestión empresarial completa, inventarios, facturación y procesos internos.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-xs">C#</span>
+          <span class="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-xs">.NET</span>
+          <span class="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-xs">SQL Server</span>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" class="text-purple-600 hover:text-purple-700 font-medium text-sm flex items-center gap-1">
+            Ver demo <i class="ri-arrow-right-line"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-800 font-medium text-sm flex items-center gap-1">
+            Código <i class="ri-github-line"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="max-w-xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-semibold text-center mb-6">Contacto</h2>
+    <p class="text-center text-gray-600 mb-8">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+    
+    <form id="contactForm" class="flex flex-col gap-4 bg-white p-8 rounded-2xl shadow-md">
+      <div>
+        <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-400 focus:border-transparent outline-none transition duration-300">
+      </div>
+      
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+        <input type="email" id="email" name="email" required placeholder="tu@email.com" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-400 focus:border-transparent outline-none transition duration-300">
+      </div>
+      
+      <div>
+        <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required rows="4" placeholder="Cuéntame sobre tu proyecto..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-400 focus:border-transparent outline-none transition duration-300"></textarea>
+      </div>
+      
+      <button type="submit" class="bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 hover:scale-105 shadow-md transition-transform duration-300 flex items-center justify-center gap-2">
+        <span>Enviar mensaje</span>
+        <i class="ri-send-plane-line"></i>
+      </button>
+      
+      <div id="formMessage" class="hidden text-center p-3 rounded-lg"></div>
+    </form>
+    
+    <!-- Contacto alternativo -->
+    <div class="mt-8 text-center">
+      <p class="text-gray-600 mb-4">O contáctame directamente:</p>
+      <div class="flex justify-center gap-6">
+        <a href="mailto:miguel.olivares@example.com" class="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium">
+          <i class="ri-mail-line text-xl"></i>
+          Email
+        </a>
+        <a href="https://www.linkedin.com/in/miguel-olivares" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium">
+          <i class="ri-linkedin-box-line text-xl"></i>
+          LinkedIn
+        </a>
+        <a href="https://github.com/miguel-olivares" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium">
+          <i class="ri-github-line text-xl"></i>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-500 text-sm border-t border-gray-200">
+    <p class="mb-2">© 2025 Miguel Angel Olivares Hernandez</p>
+    <p class="text-xs">Diseñado con 💜 usando TailwindCSS</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Toggle de tema oscuro
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const icon = darkModeToggle.querySelector('i');
+    
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('ri-moon-line');
+        icon.classList.add('ri-sun-line');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        icon.classList.remove('ri-sun-line');
+        icon.classList.add('ri-moon-line');
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+    
+    // Cargar preferencia de tema
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+      icon.classList.remove('ri-moon-line');
+      icon.classList.add('ri-sun-line');
+    }
+    
+    // Manejo del formulario de contacto
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = {
+        nombre: document.getElementById('nombre').value,
+        email: document.getElementById('email').value,
+        mensaje: document.getElementById('mensaje').value
+      };
+      
+      // Mostrar mensaje de éxito
+      formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+      formMessage.classList.add('bg-green-100', 'text-green-700');
+      formMessage.textContent = '¡Mensaje enviado con éxito! Te contactaré pronto.';
+      
+      // Limpiar formulario
+      contactForm.reset();
+      
+      // Ocultar mensaje después de 5 segundos
+      setTimeout(() => {
+        formMessage
